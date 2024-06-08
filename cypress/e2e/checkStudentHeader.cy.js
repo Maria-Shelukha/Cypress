@@ -3,17 +3,12 @@
 
 describe('verifier site', () => {
   beforeEach(() => {
-    const login = "mari_shel"
-    const password = "35futisu"
-    cy.visit('/')
-    cy.get('[data-cy=accountMenu]').click()
-    cy.get('[data-cy=login]').click()
-    cy.get('[data-cy=username]').type(login)
-    cy.get('[data-cy=password]').type(password)
-    cy.get('[data-cy=submit]').click() 
+    cy.login(Cypress.env("login"), Cypress.env("password"));
   });
+   
 
   it('User can follow the header links', () => {
+    
     
     //1. Avaliable more header links for authorised user
     cy.get('[data-cy=navbar] li').should('have.length', 5)

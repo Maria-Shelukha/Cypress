@@ -6,7 +6,10 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
-    "cy:dashboard": "npx cypress run --record --key 15349843-f152-4afb-b1f6-6d8131c476fe"
+    "cy:run:live": "npx cypress run --config-file cypress-live.config.js",
+    "cy:run:staging": "npx cypress run --config-file cypress-staging.config.js",
+    "cy:dashboard:live": "npx cypress run --config-file cypress-live.config.js --record --key 15349843-f152-4afb-b1f6-6d8131c476fe",
+    "cy:dashboard:staging": "npx cypress run --config-file cypress-staging.config.js --record --key 15349843-f152-4afb-b1f6-6d8131c476fe"
 
   },
   "keywords": [
