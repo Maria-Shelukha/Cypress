@@ -7,7 +7,10 @@
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
     "cy:run:live": "npx cypress run --config-file cypress-live.config.js",
+    "cy:run:live:chrome": "npx cypress run --browser chrome --config-file cypress-live.config.js",
     "cy:run:staging": "npx cypress run --config-file cypress-staging.config.js",
+    "cy:run:staging:electron": "npx cypress run --browser electron --config-file cypress-staging.config.js",
+    "cy:run:live_staging_dash": "npm run cy:run:live:chrome && npm run cy:run:live:chrome cy:run:staging:electron",
     "cy:dashboard:live": "npx cypress run --config-file cypress-live.config.js --record --key 15349843-f152-4afb-b1f6-6d8131c476fe",
     "cy:dashboard:staging": "npx cypress run --config-file cypress-staging.config.js --record --key 15349843-f152-4afb-b1f6-6d8131c476fe"
 
